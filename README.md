@@ -58,12 +58,18 @@ W naszym projekcie zastosowaliśmy artykuły w języku włoskim do analizy.
        - Im wyżej, tym częściej dane słowo jest używane w języku i różnych kontekstach.
      - **Niebieska linia ("Core words")** – obrazuje, jak szybko spada liczba połączeń,
        gdy przechodzimy od najczęstszych słów do najrzadszych.
+7. W pliku **count_rank_chart.png** wykres przedstawia zależność **Count * Rank (oś Y)** od **Rank (oś X)**.  
 
-8. W pliku count_rank_chart.png wykresprzedstawia zależność Count*Rank (oś Y) od Rank (oś X).
-W idealnym przypadku zgodnym z prawem Zipfa iloczyn Count*Rank byłby stały - punkty tworzyłyby prostą, równoległą do osi X. 
-Na wygenerowanym wykresie możemy zauważyć zbliżoną zależność dla przedziału X:(619, 2473) - punkty tworzą kształt zbliżony do prostej.
-Natomiast dla X:<1, 619> są widoczne duże skoki na wykresie. Odchylenia te spowodowane są częstym występowaniem zaimków, przyimków lub rodzajników w języku włoskim, które zaburzają wykres w punkcie X=1.
-Od przedziału X=<2473, inf) zauważyć możemy, że częstość występowań danych słów w języku nie zmienia się, ale ranga rośnie. Z tego powodu następuję coraz większe odchylenie wykresu.
+   W idealnym przypadku, zgodnie z prawem Zipfa, iloczyn `Count * Rank` byłby **stały** — punkty tworzyłyby prostą równoległą do osi X.  
+
+   Na wygenerowanym wykresie możemy zauważyć zbliżoną zależność dla przedziału **X ∈ (619, 2473)** — punkty tworzą kształt zbliżony do prostej.  
+
+   Natomiast dla **X ∈ <1, 619>** widoczne są duże skoki na wykresie.  
+   Odchylenia te spowodowane są częstym występowaniem **zaimków, przyimków i rodzajników** w języku włoskim (np. *il, la, di, e, a, che*), które zaburzają przebieg w punkcie X = 1.  
+
+   Od przedziału **X ≥ 2473** można zauważyć, że częstotliwość występowań słów w języku prawie się nie zmienia, ale rośnie ich ranga.  
+   W efekcie pojawia się coraz większe odchylenie wykresu.
+
 # Wnioski
 Prawo Zipfa głosi, że częstość występowania słowa w danym języku jest odwrotnie proporcjonalne do jego rangi w uporządkowanej liście słów: f(r)=1/r.
 Na podstawie wykresu (word_graph.png) możemy stwierdzić, że spełnia on prawo Zipfa. Analizując strukturę wykresu, możemy zauważyć, że: 
