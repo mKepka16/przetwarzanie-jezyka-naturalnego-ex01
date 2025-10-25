@@ -28,16 +28,16 @@ Wierzchołki to unikatowe słowa, łączymy słowa gdy w jakimś tekście wystą
 
 Idziemy od góry tabelki i namierzamy pierwsze 50 rzeczowników i je tłumaczymy.
 
-## Uruchomienie programu
+# Uruchomienie programu
 W katalogu projektu zainstaluj(jeśli nie masz na vsc) typescript, tsx, chart.js+canvas.  
 Komendą w katalogu projektu: npm install
-# Uruchom tryb deweloperski
-npm run dev
-W przypadku błędu "sh:1 tsx: not found" zainstaluj tsx ręcznie:
+## Uruchom tryb deweloperski
+npm run dev  
+W przypadku błędu "sh:1 tsx: not found" zainstaluj tsx ręcznie:  
 npm install --save-dev tsx
 ## Działanie po starcie
-Program analizuje język naturalny z prawem Zipfa.
-Wykorzystuje do tego kilka tekstów znajdujących się w folderze assets/.
+Program analizuje język naturalny z prawem Zipfa.  
+Wykorzystuje do tego kilka tekstów znajdujących się w folderze assets/.  
 W naszym projekcie zastosowaliśmy artykuły w języku włoskim do analizy.
 # Program:
 1. Wczytuje teksty z folderu assets/
@@ -46,8 +46,8 @@ W naszym projekcie zastosowaliśmy artykuły w języku włoskim do analizy.
 4. Nadaje rangi (r) - sortuje od najczęstszych do najrzadszych.
 5. Oblicza prawo Zipfa za pomocą wzoru: r*f
 6. Wynik wyświetlany jest:
-    -w konsoli
-    -w pliku word_graph.png jako wykres 
+   -w konsoli
+   -w pliku word_graph.png jako wykres 
 word_graph.png przedstawia jak wiele połączeń mają poszczególne słowa.
 Oś X ("ID") - to kolejne słowa uporządkowane według liczby połączeń.
     -Na początku osi są najważniejsze słowa (najczęściej występujące)
@@ -55,7 +55,7 @@ Oś X ("ID") - to kolejne słowa uporządkowane według liczby połączeń.
 Oś Y ("Connections") - to liczba połączeń danego słowa z innymi słowami,
     - Im wyżej tym częściej dane słowo jest używane w języku i różnych kontekstach.
 Niebieska linia ("Core words") - obrazuje jak szybko spada liczba połączeń, gdy przechodzimy od naczęstszych słów do narzadszych.
-7. W pliku count_rank_chart.png wykresprzedstawia zależność Count*Rank (oś Y) od Rank (oś X).
+8. W pliku count_rank_chart.png wykresprzedstawia zależność Count*Rank (oś Y) od Rank (oś X).
 W idealnym przypadku zgodnym z prawem Zipfa iloczyn Count*Rank byłby stały - punkty tworzyłyby prostą, równoległą do osi X. 
 Na wygenerowanym wykresie możemy zauważyć zbliżoną zależność dla przedziału X:(619, 2473) - punkty tworzą kształt zbliżony do prostej.
 Natomiast dla X:<1, 619> są widoczne duże skoki na wykresie. Odchylenia te spowodowane są częstym występowaniem zaimków, przyimków lub rodzajników w języku włoskim, które zaburzają wykres w punkcie X=1.
