@@ -71,8 +71,22 @@ W naszym projekcie zastosowaliśmy artykuły w języku włoskim do analizy.
    W efekcie pojawia się coraz większe odchylenie wykresu.
 8. W pliku **first_50_nouns.txt** zostały przedstawione 50 najczęściej wystepujących rzeczowników w języku włoskim na podstawie literatury wraz z ich tłumaczeniem na język polski.
 # Wnioski
-Prawo Zipfa głosi, że częstość występowania słowa w danym języku jest odwrotnie proporcjonalne do jego rangi w uporządkowanej liście słów: f(r)=1/r.
-Na podstawie wykresu (word_graph.png) możemy stwierdzić, że spełnia on prawo Zipfa. Analizując strukturę wykresu, możemy zauważyć, że: 
-    -posiada on strome opadanie na początku (kilka słów występuje ekstremalnie często),
-    -ma długi, płaski ogon (duża liczba słów występuje rzadko),
-    -jest on podobny do hiperboli, co jest zgodne z zależnością f ~ 1/r - częstość maleje odwrotnie proporcjonalnie do rangi.
+Prawo Zipfa głosi, że **częstość występowania słowa w danym języku jest odwrotnie proporcjonalna do jego rangi** w uporządkowanej liście słów:  
+> f(r) = 1 / r
+
+Oznacza to, że drugie najczęściej występujące słowo pojawia się około dwa razy rzadziej niż najczęstsze, trzecie trzy razy rzadziej itd.  
+Zależność ta jest uniwersalna i występuje we wszystkich językach naturalnych — od angielskiego po włoski czy polski.
+
+Na podstawie wykresu **`word_graph.png`** oraz **`count_rank_chart.png`** możemy stwierdzić, że **język włoski w dużym stopniu spełnia prawo Zipfa**.  
+
+Analizując strukturę wykresów, można zauważyć, że:  
+- posiadają **strome opadanie na początku**, co oznacza, że kilka słów (np. rodzajniki, zaimki, spójniki) występuje ekstremalnie często,  
+- mają **długi, płaski ogon**, co wskazuje, że duża liczba słów pojawia się rzadko, tylko w specyficznych kontekstach,  
+- kształt wykresu przypomina **hiperbolę**, zgodnie z zależnością `f ~ 1/r`, czyli częstość maleje odwrotnie proporcjonalnie do rangi.
+
+Odchylenia od idealnego przebiegu wynikają z:  
+- **bogatego słowotwórstwa języka włoskiego** (różne formy tego samego słowa),  
+- **częstego użycia zaimków, przyimków i rodzajników** – takich jak *il, la, di, e, a, che*,  
+- **ograniczonej liczby analizowanych tekstów** – próbka obejmowała jedynie wybrane artykuły, a nie cały korpus języka.
+
+Analiza potwierdza, że język jest logicznym i samoregulującym się systemem – najczęstsze słowa pozwalają szybko przekazywać treść, a rzadkie dodają jej precyzji i znaczenia.
