@@ -69,7 +69,7 @@ W naszym projekcie zastosowaliśmy artykuły w języku włoskim do analizy.
 
    Od przedziału **X ≥ 2473** można zauważyć, że częstotliwość występowań słów w języku prawie się nie zmienia, ale rośnie ich ranga.  
    W efekcie pojawia się coraz większe odchylenie wykresu.
-
+8. W pliku **first_50_nouns.txt** zostały przedstawione 50 najczęściej wystepujących rzeczowników w języku włoskim na podstawie literatury wraz z ich tłumaczeniem na język polski.
 # Wnioski
 Prawo Zipfa głosi, że częstość występowania słowa w danym języku jest odwrotnie proporcjonalne do jego rangi w uporządkowanej liście słów: f(r)=1/r.
 Na podstawie wykresu (word_graph.png) możemy stwierdzić, że spełnia on prawo Zipfa. Analizując strukturę wykresu, możemy zauważyć, że: 
