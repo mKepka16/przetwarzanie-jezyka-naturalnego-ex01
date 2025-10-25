@@ -28,8 +28,8 @@ Wierzchołki to unikatowe słowa, łączymy słowa gdy w jakimś tekście wystą
 
 Idziemy od góry tabelki i namierzamy pierwsze 50 rzeczowników i je tłumaczymy.
 
-### Uruchomienie programu
-W katalogu projektu zainstaluj(jeśli nie masz na vsc) typescript, tsx, chart.js+canvas:
+## Uruchomienie programu
+W katalogu projektu zainstaluj(jeśli nie masz na vsc) typescript, tsx, chart.js+canvas.  
 Komendą w katalogu projektu: npm install
 # Uruchom tryb deweloperski
 npm run dev
