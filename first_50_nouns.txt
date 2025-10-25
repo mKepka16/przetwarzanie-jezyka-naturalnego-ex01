@@ -1,0 +1,50 @@
+padre - ojciec  
+amalia - Amalia  
+angelica - Angelika  
+caserta - Caserta (miasto)  
+fabrizio - Fabrizio  
+principe - książę  
+salina - Salina (nazwisko/wyspa)  
+parte - część  
+casa - dom  
+madre - matka  
+concetta - Koncetta  
+cosa - rzecz  
+anni - lata  
+occhi - oczy  
+donna - kobieta  
+città - miasto  
+notte - noc  
+figlia - córka  
+mani - ręce  
+sole - słońce  
+terra - ziemia  
+bocca - usta  
+acqua - woda  
+giorno - dzień  
+testa - głowa  
+signore - pan  
+capelli - włosy  
+vita - życie  
+vestito - ubranie / suknia  
+sera - wieczór  
+palazzo - pałac  
+aria - powietrze  
+sangue - krew  
+figlio - syn  
+nipote - wnuk / siostrzeniec  
+cuore - serce  
+braccio - ramię  
+fronte - czoło  
+mare - morze  
+fine - koniec  
+anno - rok  
+romanzo - powieść  
+francesco - Franciszek  
+passato - przeszłość  
+ordine - porządek  
+villa - willa  
+carolina - Karolina  
+case - domy  
+ragazza - dziewczyna  
+maria - Maria
