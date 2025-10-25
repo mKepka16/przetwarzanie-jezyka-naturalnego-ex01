@@ -46,15 +46,19 @@ W naszym projekcie zastosowaliśmy artykuły w języku włoskim do analizy.
 4. Nadaje rangi (r) - sortuje od najczęstszych do najrzadszych.
 5. Oblicza prawo Zipfa za pomocą wzoru: r*f
 6. Wynik wyświetlany jest:
-   -w konsoli
-   -w pliku word_graph.png jako wykres 
-word_graph.png przedstawia jak wiele połączeń mają poszczególne słowa.
-Oś X ("ID") - to kolejne słowa uporządkowane według liczby połączeń.
-    -Na początku osi są najważniejsze słowa (najczęściej występujące)
-    -Na końcu osi - najrzadziej używane słowa, oraz te, które występują tylko kilka razy w języku.
-Oś Y ("Connections") - to liczba połączeń danego słowa z innymi słowami,
-    - Im wyżej tym częściej dane słowo jest używane w języku i różnych kontekstach.
-Niebieska linia ("Core words") - obrazuje jak szybko spada liczba połączeń, gdy przechodzimy od naczęstszych słów do narzadszych.
+   - w **konsoli**
+   - w pliku **word_graph.png** jako wykres  
+
+     `word_graph.png` przedstawia, jak wiele połączeń mają poszczególne słowa.
+
+     - **Oś X ("ID")** – to kolejne słowa uporządkowane według liczby połączeń.  
+       - Na początku osi są najważniejsze słowa (najczęściej występujące).  
+       - Na końcu osi – najrzadziej używane słowa oraz te, które występują tylko kilka razy w języku.
+     - **Oś Y ("Connections")** – to liczba połączeń danego słowa z innymi słowami.  
+       - Im wyżej, tym częściej dane słowo jest używane w języku i różnych kontekstach.
+     - **Niebieska linia ("Core words")** – obrazuje, jak szybko spada liczba połączeń,
+       gdy przechodzimy od najczęstszych słów do najrzadszych.
+
 8. W pliku count_rank_chart.png wykresprzedstawia zależność Count*Rank (oś Y) od Rank (oś X).
 W idealnym przypadku zgodnym z prawem Zipfa iloczyn Count*Rank byłby stały - punkty tworzyłyby prostą, równoległą do osi X. 
 Na wygenerowanym wykresie możemy zauważyć zbliżoną zależność dla przedziału X:(619, 2473) - punkty tworzą kształt zbliżony do prostej.
