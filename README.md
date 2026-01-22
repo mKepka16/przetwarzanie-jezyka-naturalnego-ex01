@@ -18,6 +18,7 @@ W naszym projekcie zastosowaliśmy artykuły w języku włoskim do analizy.
 6. Wynik wyświetlany jest:
    - w **konsoli**
    - w pliku **word_graph.png** jako wykres  
+   - w pliku **zipf_loglog_chart.png** jako wykres log-log z dopasowaniem prostej (żółte punkty, czerwona linia)
 
      `word_graph.png` przedstawia, jak wiele połączeń mają poszczególne słowa.
 

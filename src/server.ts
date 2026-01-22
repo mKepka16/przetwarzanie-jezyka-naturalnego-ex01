@@ -132,6 +132,93 @@ function saveCountRankChart(
   });
 }
 
+function saveZipfLogLogChart(
+  wordCount: Record<string, number>,
+  path: string
+) {
+  const sortedWords = Object.entries(wordCount).sort((a, b) => b[1] - a[1]);
+  const counts = sortedWords.map(([, count]) => count);
+  const ranks = counts.map((_, index) => index + 1);
+
+  const logPoints = ranks.map((rank, index) => ({
+    x: Math.log10(rank),
+    y: Math.log10(counts[index]),
+  }));
+
+  const n = logPoints.length;
+  const sumX = logPoints.reduce((acc, p) => acc + p.x, 0);
+  const sumY = logPoints.reduce((acc, p) => acc + p.y, 0);
+  const sumXY = logPoints.reduce((acc, p) => acc + p.x * p.y, 0);
+  const sumXX = logPoints.reduce((acc, p) => acc + p.x * p.x, 0);
+  const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+  const intercept = (sumY - slope * sumX) / n;
+
+  const fittedLine = [
+    { x: logPoints[0].x, y: slope * logPoints[0].x + intercept },
+    {
+      x: logPoints[logPoints.length - 1].x,
+      y: slope * logPoints[logPoints.length - 1].x + intercept,
+    },
+  ];
+
+  const width = 800;
+  const height = 600;
+  const canvas = createCanvas(width, height);
+
+  new Chart(canvas as unknown as ChartItem, {
+    type: 'line',
+    data: {
+      datasets: [
+        {
+          label: 'Log-Log data',
+          data: logPoints,
+          borderColor: 'yellow',
+          backgroundColor: 'rgba(255, 255, 0, 0.15)',
+          borderWidth: 1,
+          showLine: false,
+          pointRadius: 1,
+        },
+        {
+          label: `Fit slope=${slope.toFixed(3)}`,
+          data: fittedLine,
+          borderColor: 'red',
+          borderWidth: 2,
+          pointRadius: 0,
+        },
+      ],
+    },
+    options: {
+      responsive: false,
+      plugins: {
+        legend: {
+          display: true,
+        },
+      },
+      scales: {
+        x: {
+          type: 'linear',
+          title: {
+            display: true,
+            text: 'log10(Rank)',
+          },
+        },
+        y: {
+          type: 'linear',
+          title: {
+            display: true,
+            text: 'log10(Count)',
+          },
+        },
+      },
+    },
+  });
+
+  const buffer = canvas.toBuffer('image/png');
+  return writeFile(path, buffer).then(() => {
+    console.log(`Chart saved to ${path}`);
+  });
+}
+
 function buildWordGraph(text: string): Record<string, Set<string>> {
   const wordGraph: Record<string, Set<string>> = {};
   const words = text.split(' ');
@@ -258,6 +345,7 @@ async function main() {
 
   printTop500Words(wordCount);
   await saveCountRankChart(wordCount, 'count_rank_chart.png');
+  await saveZipfLogLogChart(wordCount, 'zipf_loglog_chart.png');
 
   const wordGraph = buildWordGraph(processedContent);
   printWordsFromGraph(wordGraph);
