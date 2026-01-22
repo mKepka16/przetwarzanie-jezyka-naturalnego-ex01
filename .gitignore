@@ -1,4 +1,4 @@
 node_modules
 res.txt
-word_graph.png
-count_rank_chart.png
+/*.png
+!/generated/*
